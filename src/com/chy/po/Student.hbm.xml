@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.chy.po">
+    <class name="Student" table="student" lazy="false">
+        <composite-id name="stu" class="Stu">
+            <key-property name="name"></key-property>
+            <key-property name="stuNumber"></key-property>
+        </composite-id>
+        <component name="address" class="Address">
+            <property name="province"></property>
+            <property name="city"></property>
+            <property name="county"></property>
+        </component>
+    </class>
+</hibernate-mapping>
